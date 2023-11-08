@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=Reyhaneh Matboo joined as a guest Micha
+    joined as a guest melikaam (10. Oct 2023, 20:40), initial-scale=1.0"
+    />
+    <button onclick="play('rock')">ROCK!!</button>
+    <button onclick="play('paper')">PAPER</button>
+    <button onclick="play('scissors')">SCISSOR</button>
+    <script>
+      function play(choice) {
+        let computerChoice = randomMove();
+        if (computerChoice === choice) {
+          document.body.style.backgroundColor = "yellow";
+        } else if (
+          (computerChoice === "paper" && choice === "rock") ||
+          (computerChoice === "rock" && choice === "scissors") ||
+          (computerChoice === "scissors" && choice === "paper")
+        ) {
+          document.body.style.backgroundColor = "red";
+        } else {
+          document.body.style.backgroundColor = "green";
+        }
+      }
+      function randomMove() {
+        let randomNumber = Math.random();
+        if (randomNumber < 0.33) {
+          return "rock";
+        } else if (randomNumber < 0.66) {
+          return "paper";
+        } else {
+          return "scissors";
+        }
+      }
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>

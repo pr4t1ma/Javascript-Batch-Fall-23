@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        background: #06b8fe;
+      }
+      label {
+        padding: 4px 0;
+        display: block;
+        color: rgb(251, 155, 0);
+      }
+      .form {
+        display: block;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv">Hello</div>
+    <input type="text" name="name" id="name" />
+    <button onclick="submit()">Submit</button>
+
+    <div id="myDiv2">
+      <div class="form">
+        <input type="input" name="name" id="color" />
+        <button onclick="changeColor()">Change background</button>
+      </div>
+    </div>
+
+    bonustask 4
+    <p>Chocolate Price is $2</p>
+    <label for="chocolate">Chocolate Quantity</label>
+    <input
+      type="number"
+      id="chocolate"
+      min="0"
+      value="0"
+      oninput="amoutOfChocolate()"
+    />
+    <p>Hummus Price is $1.99</p>
+    <label for="hummus">Hummus Quanttity</label>
+    <input
+      type="number"
+      id="hummus"
+      min="0"
+      value="0"
+      oninput="amoutOfChocolate()"
+    />
+    <div id="price">total price $ : <span id="totalAmount"></span></div>
+
+    <script>
+      function submit() {
+        let inputElem = document.getElementById('name');
+        console.log(inputElem);
+        let value = inputElem.value;
+        let myDiv = document.getElementById('myDiv');
+        myDiv.textContent = 'Hello ' + value;
+      }
+      function changeColor() {
+        let inputColor = document.getElementById('color').value;
+        document.body.style.backgroundColor = inputColor;
+      }
+
+      let price = 2;
+      function amountChanged() {
+        let inputAmt = document.getElementById('amount').value;
+        document.getElementById('price').textContent = '';
+        let totalPrice = inputAmt * price;
+      }
+
+      let amountChocolate = 2;
+      let amounntHummus = 1.99;
+      let total = 0;
+      const chocolateInput = document.getElementById('chocolate');
+      const hummusInput = document.getElementById('hummus');
+      function amoutOfChocolate(e) {
+        total =
+          amountChocolate * chocolateInput.value +
+          amounntHummus * hummusInput.value;
+        console.log(totalAmount);
+        document.getElementById('totalAmount').textContent = total;
+      }
+    </script>
+  </body>
+</html>

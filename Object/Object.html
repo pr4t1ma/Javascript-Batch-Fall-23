@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="red">Red</button>
+    <button id="green">Grenn</button>
+    <button id="blue">Blue</button>
+    <script>
+      let laptop1 = {
+        cpu: "i7",
+        ram: "16",
+        brad: "HP",
+        getconfig: function () {
+          document.body.innerText = "Welcome to my site";
+          console.log("Laptop1");
+          console.log(this.cpu);
+        },
+      };
+      laptop1.getconfig();
+
+      let laptop = {
+        cpu: "i9",
+        ram: "16",
+        brad: "HP",
+        getconfig: function () {
+          document.body.innerText = "Welcome to my site";
+          console.log("Laptop");
+          console.log(this.cpu);
+        },
+      };
+      laptop.getconfig();
+
+      let me = {
+        name: "Hassen",
+        adress: {
+          country: "Germany",
+          city: "Berlin",
+        },
+        introdue: function () {
+          coonsole.log("Hi my name is" + me.name);
+        },
+      };
+
+      let car = {
+        comany: "Toyota",
+        model: "Corolla",
+        describe: function () {
+          console.log("I drive a " + this.comany + this.model);
+        },
+      };
+      car.describe();
+
+      document.getElementById("red").style.backgroundColor = "red";
+    </script>
+  </body>
+</html>

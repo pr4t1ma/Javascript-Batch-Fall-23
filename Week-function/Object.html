@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let me = {
+        name: "Pratima Maharjan",
+        favouratefood: "chicken curry",
+        haircolor: "black",
+        eyecoolor: "black",
+      };
+      function introduce(me) {
+        console.log(
+          " hi, My name is " +
+            me.name +
+            "my favourate food is " +
+            me.favouratefood
+        );
+      }
+      introduce(me);
+
+      let friend = {
+        name: "Carolina",
+        favouratefood: ["pommes", "supe"],
+        haircolor: "black",
+        eyecoolor: "black",
+      };
+      function introduce(friend) {
+        console.log(
+          `hi, my name is ${friend.name} and my favourate food is ${friend.favouratefood}`
+        );
+      }
+      introduce(friend);
+      let personOne = {
+        name: "Linda",
+        age: 30,
+      };
+      let personTwo = {
+        name: "Anna",
+        age: 25,
+      };
+      function whoIsOlder(personOne, personTwo) {
+        if (personOne.age < personTwo.age) {
+          console.log("Anna is older");
+        } else if (personOne.age === personTwo.age) {
+          console.log("Bot");
+        } else {
+          console.log(personOne.name + "is older");
+        }
+      }
+      whoIsOlder(personOne, personTwo);
+
+      let myMood = {
+        name: "preti",
+        greeting: function () {},
+      };
+    </script>
+  </body>
+</html>

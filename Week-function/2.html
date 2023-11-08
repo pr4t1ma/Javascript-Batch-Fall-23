@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="changeColorRed('red')">Red</button>
+    <button onclick="changeColorGreen('green')">Green</button>
+    <button onclick="changeColorYellow('yellow')">yellow</button>
+    <script>
+      function changeClolor(color) {
+        document.body.style.backgroundColor = color;
+      }
+      function changeColorRed() {
+        if (document.body.style.backgroundColor === color) {
+          document.body.style.backgroundColor = "";
+        } else {
+          Document.body.style.backgroundColor = color;
+        }
+      }
+    </script>
+  </body>
+</html>

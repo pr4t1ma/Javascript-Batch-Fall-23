@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .label {
+        margin: 10px 0;
+        display: block;
+    }
+    input{
+        margin:10px 10px 0 0;
+        display: block;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- We're creating a web shop selling hummus (or chocolate, or eba and egusi
+    soup)! Create a number input field in HTML that lets the user choose the
+    amount of hummus: Choose the amount of hummus servings: -->
+    <!-- <input type="number" id="amount" min="0" value="0" oninput="amountChanged()"> -->
+    <!-- Use the valueAsNumber property of the number input to get the amount that
+    the user selected in your amountChanged function. Output the total price the
+    user has to pay to a div element. 
+
+    TASK 4 (BONUS) Extend your webshop to sell
+    two products (e.g. hummus and chocolate). Every product has a different
+    price. Update the total price in the div element every time the user changes
+    the amount of hummus and chocolate. TASK
+
+     5 (BONUS) There's a special sale -
+    if the user buys products for more than 20 EUR, they get 10% discount. -->
+    <p>Humms is $1.99, How many hummus do you want?</p>
+    <div class="label">
+      <label for="chocolate">Chocolate Quantity:</label
+      ><input
+        type="number"
+        id="chocolate"
+        min="0"
+        value="0"
+        oninput="amountChanged(this)"
+      />
+    </div class="label">
+
+    <div>
+      <label for="hummus">Hummus Quantity:</label>
+      <input
+        type="number"
+        id="hummus"
+        min="0"
+        value="0"
+        oninput="amountChanged()"
+      />
+    </div>
+
+    <div id="myDiv">Total price: $<span id="total"></span></div>
+  </body>
+  <script>
+    let chocolatePrice = 3;
+    let hummusPrice = 1.99;
+    let total = 0;
+    let discount=10;//discount in percentage
+    const chocolateInput = document.getElementById('chocolate');
+    const hummusInput = document.getElementById('hummus');
+
+    function amountChanged(e) {
+      total =
+        chocolatePrice * chocolateInput.valueAsNumber +
+        hummusPrice * hummusInput.valueAsNumber;
+        total= total-discount/100 * total;
+      document.getElementById('total').textContent = total;
+    }
+  </script>
+</html>

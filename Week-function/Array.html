@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("aaa");
+      let friend = ["Anna", "Lisa", "Tannaz"];
+      console.log("hello " + friend[0]);
+      console.log("hello " + friend[1]);
+      console.log("hello " + friend[2]);
+      console.log("hello " + friend[3]);
+      friend[1] = "Jana";
+      friend[2] = "Lena";
+      console.log(friend[1]);
+      console.log(friend[2]);
+      console.log(friend.length);
+      friend.push("Salina");
+      friend.push("Sajina");
+      friend.pop();
+      console.log(friend.length);
+
+      let friends = ["Anna", "Lena", "owen", "Preeti", "Harald"];
+      let Cost = 7;
+      let lastFreiend = friends.length - 1;
+      friends.push("sara");
+      friends.push("karan");
+
+      let totalCost = friends.length * Cost;
+      let firstPayment = totalCost / 2;
+      let remainingPayment = firstPayment / (friends.length - 2);
+
+      console.log(totalCost);
+      console.log(firstPayment);
+      console.log(remainingPayment);
+      console.log(friends.length);
+      console.log("Welcome " + friends[lastFreiend]);
+    </script>
+  </body>
+</html>

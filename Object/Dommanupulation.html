@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myDiv">0</div>
+    <button id="btn" onclick="increment()">Click me</button>
+    <div>
+      <button onclick="changeColor('red')">Red</button>
+      <button onclick="changeColor('green')">Green</button>
+      <button onclick="changeColor('blue')">Blue</button>
+    </div>
+    <button onclick="changeDiv('red')">Inside Div</button>
+    <div id="Btn">hello</div>
+    Choose the amount of hummus servings:
+    <input
+      type="number"
+      id="amount"
+      min="0"
+      value="0"
+      oninput="amountChanged()"
+    />
+    <div id="priceDiv">0 EUR</div>
+
+    <script>
+      let numberOfclick = 0;
+      function increment() {
+        document.getElementById('myDiv').textContent = numberOfclick++;
+      }
+      function changeColor(color) {
+        if (color === 'red') {
+          document.body.style.backgroundColor =
+            document.body.style.backgroundColor === 'red' ? 'white' : 'red';
+        } else if (color === 'green') {
+          document.body.style.backgroundColor =
+            document.body.style.backgroundColor === 'white'
+              ? '#aaf5e7'
+              : 'white';
+        } else {
+          document.body.style.backgroundColor =
+            document.body.style.backgroundColor === 'white'
+              ? '#c1c1ff'
+              : 'white';
+        }
+      }
+      function changeDiv() {
+        let myDiv = document.getElementById('Btn');
+        myDiv.style.backgroundColor = 'red';
+      }
+      let hummusPrice = 5;
+      function amountChanged() {
+        let amountElement = document.getElementById('amount');
+        let priceDiv = document.getElementById('priceDiv');
+        let amount = amountElement * valueAsNumber;
+        let toalPrice = amount * hummusPrice;
+        priceDiv.textContent = totalPrice + 'EUR';
+      }
+    </script>
+  </body>
+</html>

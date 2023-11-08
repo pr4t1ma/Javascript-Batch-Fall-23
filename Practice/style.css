@@ -1,0 +1,48 @@
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  background: #ccc;
+  width: 33%;
+  height: 25vh;
+  border: 1px solid #fff;
+  font-size: 20vh;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #ddd;
+}
+
+/* Winners */
+.winner-r-0 .r-0,
+.winner-r-1 .r-1,
+.winner-r-2 .r-2,
+.winner-c-0 .c-0,
+.winner-c-1 .c-1,
+.winner-c-2 .c-2,
+.winner-d-0 .d-0,
+.winner-d-1 .d-1 {
+  animation: back-win 500ms infinite alternate;
+}
+
+@keyframes back-win {
+  0% {
+    background-color: rgb(195, 54, 255);
+  }
+  50% {
+    background-color: rgb(4, 177, 4);
+  }
+  100% {
+    background-color: rgb(71, 145, 255);
+  }
+}
